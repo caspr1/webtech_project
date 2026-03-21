@@ -3532,3 +3532,124 @@ top: 14px;
     background: #f0f0f0;
   }
 }
+
+/* aboutpage */ 
+
+#about_body .about_page_content {
+  padding-top: 160px; 
+}
+
+.mission_title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#mission {
+  text-align: center;
+  width: 90%;
+  color: #520C15;
+  letter-spacing: 0.5px;
+  font-family: Georgia, serif;
+  font-size: 50px;
+  font-weight: 900;
+  padding: 20px;
+  margin: 20px auto 90px auto; 
+
+}
+
+.about_box {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #520C15; 
+
+  background: linear-gradient(135deg, #fbc654, #7a003390);
+  padding: 25px;
+  margin: 60px auto 40px auto;
+  max-width: 1300px;
+  width: 100%;
+
+  border-left: 6px solid #800020;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  color: #620606;
+}
+
+h2 {
+  color: #603002;
+  font-size: 27px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.about_box p {
+  font-size: 24px;
+  line-height: 1.7;
+  color: #483502; 
+  text-align: justify;
+}
+
+.about_list {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.about_list li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  color: #800020;
+  font-weight: 500;
+  white-space: normal;
+}
+
+
+.about_list li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.about_list a {
+  color: #800020;       
+  text-decoration: none;
+  white-space: normal;
+  font-size: 24px;
+}
+
+.about_list a:hover {
+  text-decoration: underline;
+}
+
+.about_list li i {
+  color: #800020;
+  font-size: 24px;
+  min-width: 16px;
+}
+
+.mission_figure {
+  display: block;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.mission_figure img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.mission_figure figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #603002;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
