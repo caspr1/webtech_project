@@ -3557,19 +3557,19 @@ top: 14px;
 
 }
 
-.about_box {
+.about_box, .list_box {
   font-family: "Georgia", "Times New Roman", serif;
   color: #520C15; 
-
+  font-size: 20px;
   background: linear-gradient(135deg, #fbc654, #7a003390);
   padding: 25px;
   margin: 60px auto 40px auto;
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
 
   border-left: 6px solid #800020;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 15px #e2b7b7;
 }
 
 h1 {
@@ -3613,7 +3613,7 @@ h2 {
 
 
 .about_list li:hover {
-  background: rgba(0,0,0,0.05);
+  background: #f9ce85
 }
 
 .about_list a {
@@ -3652,4 +3652,85 @@ h2 {
   color: #603002;
   font-style: italic;
   font-family: Georgia, serif;
+}
+
+
+/*Frequently downloaded / Trending page */
+
+
+.counter-caption {
+  font-family: Impact, sans-serif;
+  color: #704304e2;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+}
+
+.counter-block {
+  display: inline-flex;
+  gap: 90px;
+}
+
+.counter-block div {
+  background: #ffffffcb;
+  border-radius: 8px;
+  padding: 20px 30px;
+  border: 1px solid #052958;
+  font-size: 20px;
+  font-style: bold;
+  font-family: Georgia, serif;
+}
+
+#book-downloads-table {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #052958;
+  text-align: center;
+}
+
+#books-downloads-nav {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 200px;
+
+  border: 1px solid #550202;
+  padding: 15px;
+  background: #eee8e0c9;
+
+  border-radius: 10px;
+  font-family: Georgia, serif;
+}
+#books-downloads-table {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #052958;
+}
+
+.nav-title {
+  width: 100%;
+  letter-spacing: 0.5px;
+  font-family: Impact, sans-serif;
+}
+
+h2.list_title {
+  margin-left: 200px;
+  margin-bottom: 30px;
+  margin-top: 200px;
+  font-family: Georgia, sans-serif;
+  font-size: 50px;
+  letter-spacing: 1px;
+  width: 900px;
+}
+
+h1.trending-title {
+  margin-left: 300px;
+  text-decoration: underline wavy orange 5px;
+  margin-bottom: 30px;
+  margin-top: 200px;
+  font-family: Impact, sans-serif;
+  font-size: 90px;
+  letter-spacing: 2px;
+  color: #3e0000b6
 }
