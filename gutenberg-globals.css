@@ -3541,10 +3541,17 @@ top: 14px;
 
 .mission_title {
   text-align: center;
-  margin-top: 30px;
+  text-decoration: underline wavy orange 5px;
+  margin-bottom: 50px;
+  margin-top: 200px;
+  font-family: Impact, sans-serif;
+  font-size: 90px;
+  letter-spacing: 2px;
+  color: #3e0000d0
 }
 
 #mission {
+  margin-top: 200px;
   text-align: center;
   width: 90%;
   color: #520C15;
@@ -3732,5 +3739,52 @@ h1.trending-title {
   font-family: Impact, sans-serif;
   font-size: 90px;
   letter-spacing: 2px;
-  color: #3e0000b6
+  color: #3e0000d0
+}
+
+/*Main Categories*/
+
+.bookshelves {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap: 20px;
+}
+
+.book-list {
+  border: 1px solid #781313;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #684734a7;
+}
+
+.book-list h2 {
+  color: #964400;
+  padding: 30px 20px; 
+  background-color: #eb9e1852;
+  border-radius: 10px;
+  font-size: 48px;
+  text-shadow: 2px 2px 8px #fdfdfd;
+  line-height: 1;
+}
+
+.bookshelves .book-list ul li a {
+  color: #3d1000;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Georgia, sans-serif; 
+}
+
+.bookshelves .book-list ul li a:hover {
+  text-decoration: underline;
+}
+
+#main-categories h1{
+  margin-left: 550px;
+  text-decoration: underline wavy orange 5px;
+  margin-bottom: 30px;
+  margin-top: 200px;
+  font-family: Impact, sans-serif;
+  font-size: 90px;
+  letter-spacing: 2px;
+  color: #3e0000e7 
 }
