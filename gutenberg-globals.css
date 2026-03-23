@@ -113,10 +113,9 @@ body::before {
 header {
   display: flex;
   flex-direction: column;
-  left: 0;
-  position: fixed;
-  top: 0;
   width: 100%;
+  position: sticky;
+  top: -80px;
   z-index: 1000;
 }
 
@@ -208,7 +207,8 @@ th {
 
 @media (max-width: 1024px) {
   header {
-    position: relative;
+    position: sticky;
+    top: -80px;
   }
 
   body {
@@ -600,7 +600,7 @@ test_index for latest covers from gutenberg1*/
 }
 
 .page_content {
-  margin-top: 160px;
+  margin-top: 40px;
   padding-bottom: 60px;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -652,7 +652,7 @@ test_index for latest covers from gutenberg1*/
   width: 100%;
   line-height: 1em;
   color: black;
-  margin-top: 3.5em;
+  margin-top: 1em;
   word-break: break-word;
   margin-bottom: 1em;
 }
@@ -1114,11 +1114,12 @@ Remove sticky header at this breakpoint.
 
 .top-header {
   background-color: #7ebed0;
+  color: #620606;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 80px;
 }
 
 @media (max-width: 1024px) {
@@ -1279,6 +1280,10 @@ Remove sticky header at this breakpoint.
   .lower-header {
     padding-left: 10px;
     padding-right: 10px;
+    left: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   .lower-header .dropdown-button,
@@ -3400,8 +3405,10 @@ Remove sticky header at this breakpoint.
 
 #search-toggle:checked ~ .lower-header .search-form .search-button {
   width: auto;
-  padding: 0px 24px;
+  padding: 9px 24px;
+  border: 1px solid #4C8FA8;
 }
+
 
 
 /* SEARCH OPTION IDS */
@@ -4217,4 +4224,35 @@ h1.trending-title {
 /* Subjects cell — comma-separated inline */
 .subjects-cell a {
   white-space: nowrap;
+}
+
+/* landing-page-search */
+.home-page-search{
+  display: flex;
+  width: 90%;
+  margin: 20px;
+}
+
+.home-page-search-input{
+  flex: 1;
+  padding: 3px;
+  font-size: 20px;
+  border-radius: 20px 0 0 20px;
+  padding-left: 15px;
+  border: none;
+}
+
+.home-page-search-input:focus {
+  outline: none;
+}
+
+.home-page-search-button {
+  padding: 12px 24px;
+  background-color: #4C8FA8;
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }

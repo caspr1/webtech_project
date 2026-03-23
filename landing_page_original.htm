@@ -31,6 +31,7 @@
   <input type="checkbox" id="about-toggle" style="display: none">
 
   <div class="top-header">
+    <h1>Project Gutenberg</h1>
     </div>
 
   <label for="about-toggle" class="dropdown-overlay"></label>
@@ -43,7 +44,6 @@
         <a href="https://www.gutenberg.org/about/background/">History &amp; Philosophy</a>
         <a href="https://www.gutenberg.org/help/">Help Pages</a>
         <a href="https://www.gutenberg.org/ebooks/offline_catalogs.html">Offline Catalogs</a>
-        <a href="https://www.gutenberg.org/donate/">Donate</a>
       </div>
     </div>
 
@@ -69,7 +69,7 @@
           <a href="">Categories <span class="submenu-icon">&#9654;</span></a>
           <div class="submenu">
             <a href="">Read by humans</a>
-            <a href="">COmputer generated 2003</a>
+            <a href="">Computer generated 2003</a>
             <a href="">Computer generated 2023</a>
             <a href="">Librifox</a>
           </div>
@@ -97,9 +97,8 @@
       </label>
       <label for="search-close" class="search-close-btn" aria-label="Close Search">X</label>
       <input type="text" class="search-input" name="query" placeholder="Quick search" aria-label="Search books">
-      <button type="submit" class="search-button">Go!</button>
+      <button type="submit" class="search-button">Search</button>
     </form>
-
   </div>
 
   <div class="tertiary-header">
@@ -110,6 +109,11 @@
 <div class="page_content"><!-- start content -->
 
         <div class="homepage homepage__body">
+
+<form class="home-page-search" method="get" action="https://www.gutenberg.org/ebooks/search/" accept-charset="utf-8">
+  <input type="text" class="home-page-search-input" name="query" placeholder="Search for books, authors, subjects...">
+  <button type="submit" class="home-page-search-button">Search</button>
+</form>
 
 <h1 id="slogan"> Project Gutenberg is a library of over 75,000 free eBooks </h1>
 
