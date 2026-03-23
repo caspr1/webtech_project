@@ -3090,7 +3090,6 @@ h1 .icon {
   width: 100%;
   outline: none;
   box-shadow: none;
-  -webkit-appearance: none; /* appearance: none (?) */
 }
 
 #search #help-button {
@@ -3894,4 +3893,328 @@ h1.trending-title {
     font-family: Georgia, sans-serif;
     font-size: 25px;
     color: #032b52;
+}
+
+/*------------------------------------*\
+  BOOK DETAIL PAGE — UX IMPROVEMENTS
+  Additions for the bibrec/ebook page.
+  Covers: share heading, summary heading,
+  read-now button, download dropdown,
+  "readers also downloaded" carousel,
+  and category buttons.
+\*------------------------------------*/
+
+/* --- Share heading above social icons --- */
+.share-heading {
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--library-txt-color);
+  text-align: center;
+  margin: 0 0 0.4em 0;
+  letter-spacing: 0.02em;
+}
+
+/* --- Summary heading above summary text --- */
+.summary-heading {
+  font-size: 1.1em;
+  color: #603002;
+  margin: 0.8em 0 0.3em 0;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e0d8cc;
+}
+
+/* --- Prominent "Read Now!" button --- */
+/* Read Now button — same style as input[type="submit"] */
+.read-now-btn {
+  background: var(--input-submit-bg-color);
+  border: none;
+  border-radius: 45px 45px;
+  color: var(--input-submit-txt-color) !important;
+  display: inline-block;
+  padding: 6px 18px;
+  text-decoration: none !important;
+  font-size: 1em;
+  margin: 0.6em 0 0.9em 0;
+  cursor: pointer;
+}
+.read-now-btn:hover {
+  box-shadow: var(--input-submit-box-shadow-dims) var(--input-submit-box-shadow-color);
+  text-shadow: 0px 0px 6px var(--input-submit-text-shadow-color);
+  transition: all 0.4s ease 0s;
+  text-decoration: none !important;
+}
+
+/* --- Download dropdown (<details> element) --- */
+.download-dropdown {
+  margin: 0 0 1.2em 0;
+}
+
+/* Hide the default disclosure triangle across browsers */
+.download-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.download-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The visible toggle button */
+.download-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #f0ede5;
+  border: 1px solid #c5bbaa;
+  color: #603002;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.93em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  user-select: none;
+}
+.download-toggle-btn:hover {
+  background-color: #e8e4da;
+}
+/* Round bottom corners off when open so it connects to the list below */
+.download-dropdown[open] > summary .download-toggle-btn,
+.download-dropdown[open] > summary {
+  border-radius: 6px 6px 0 0;
+}
+
+/* The list of format options */
+.download-options-list {
+  border: 1px solid #c5bbaa;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  background-color: #faf8f4;
+  padding: 2px 0;
+  max-width: 520px;
+}
+
+/* Individual format row */
+.dl-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 12px;
+  border-bottom: 1px solid #ede8df;
+}
+.dl-option-row:last-child {
+  border-bottom: none;
+}
+.dl-option-row:hover {
+  background-color: #f0ede5;
+}
+
+/* Clickable format label + size */
+.dl-option-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  padding: 6px 0;
+  color: var(--library-txt-color) !important;
+  text-decoration: none;
+  font-size: 0.88em;
+}
+.dl-option-link:hover {
+  text-decoration: underline;
+}
+
+.dl-name {
+  font-weight: 500;
+}
+.dl-note {
+  font-weight: normal;
+  font-size: 0.85em;
+  color: #888;
+}
+.dl-size {
+  font-size: 0.8em;
+  color: #999;
+  white-space: nowrap;
+  margin-left: auto;
+  padding: 0 10px;
+}
+
+/* Cloud send icons (Dropbox, Drive, OneDrive) */
+.dl-clouds {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.dl-cloud-link {
+  display: inline-flex;
+  opacity: 0.65;
+  transition: opacity 0.15s;
+}
+.dl-cloud-link:hover {
+  opacity: 1;
+}
+
+/* Small note below the dropdown about extra files */
+.more-files-note {
+  margin: 0.4em 0 0 0;
+  color: #888;
+}
+
+/* --- "Readers also downloaded" carousel --- */
+.readers-also-section {
+  margin: 0.8em 0 1.4em 0;
+}
+.readers-also-heading {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #603002;
+  margin: 0 0 0.6em 0;
+}
+
+.book-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.book-carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 6px 2px 12px 2px;
+  flex: 1;
+  /* Thin scrollbar for browsers that support it */
+  scrollbar-width: thin;
+  scrollbar-color: #c5bbaa #f0ede5;
+}
+.book-carousel::-webkit-scrollbar {
+  height: 5px;
+}
+.book-carousel::-webkit-scrollbar-track {
+  background-color: #f0ede5;
+  border-radius: 3px;
+}
+.book-carousel::-webkit-scrollbar-thumb {
+  background-color: #c5bbaa;
+  border-radius: 3px;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 120px;
+  text-align: center;
+}
+.carousel-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none !important;
+  color: var(--library-txt-color) !important;
+}
+.carousel-card a:hover .carousel-title {
+  text-decoration: underline;
+}
+.carousel-card img {
+  width: 90px;
+  height: 126px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+}
+.carousel-title {
+  display: block;
+  font-size: 0.76em;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 110px;
+  color: var(--library-txt-color);
+}
+.carousel-author {
+  display: block;
+  font-size: 0.7em;
+  color: #888;
+}
+
+/* Prev/next scroll buttons for carousel */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #f0ede5;
+  border: 1px solid #c5bbaa;
+  border-radius: 50%;
+  color: #603002;
+  font-size: 1.2em;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+.carousel-btn:hover {
+  background-color: #e8e4da;
+}
+
+/* --- Category buttons (replaces navlinks) --- */
+.category-section {
+  margin: 1em 0 1em 0;
+}
+.category-heading {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #603002;
+  margin: 0 0 0.6em 0;
+}
+.category-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.category-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #f0ede5;
+  border: 1px solid #c5bbaa;
+  border-radius: 20px;
+  color: var(--library-txt-color) !important;
+  font-size: 0.85em;
+  text-decoration: none !important;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.category-btn:hover {
+  background-color: #e8e4da;
+  border-color: var(--library-txt-color);
+  text-decoration: none !important;
+}
+
+/* On small screens, hide carousel nav buttons (just swipe) */
+@media (max-width: 600px) {
+  .carousel-btn {
+    display: none;
+  }
+  .book-carousel-wrapper {
+    display: block;
+  }
+}
+
+/* Social share SVG icons — inherit link colour */
+#social .social-button a svg,
+#social a svg {
+  display: block;
+  color: var(--library-txt-color);
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+#social .social-button a:hover svg,
+#social a:hover svg {
+  opacity: 1;
+}
+/* Subjects cell — comma-separated inline */
+.subjects-cell a {
+  white-space: nowrap;
 }
