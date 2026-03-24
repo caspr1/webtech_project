@@ -826,6 +826,9 @@ test_index for latest covers from gutenberg1*/
 /* FOOTER */
 
 .footer {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: inherit;
   left: 0;
   right: 0;
@@ -835,6 +838,34 @@ test_index for latest covers from gutenberg1*/
   width: 100%;
   background-color: #f0f0f0;
 }
+
+.footer-bottom {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;   /* pushes socials to the right */
+  align-items: center;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.footer-bottom > a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.footer-socials {
+  margin-left: auto;
+}
+
+
+.footer ul {
+  width: 100%;
+  text-align: center;
+}
+
 
 .footer a:link,
 .footer a:visited,
