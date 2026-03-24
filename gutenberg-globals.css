@@ -3231,7 +3231,7 @@ h1 .icon {
 #about_book_table {
   background-color: white;
   border-collapse: collapse;
-  border: none;
+  border: 3px solid #b8b8b8;
 }
 
 #download_options_table {
@@ -3903,33 +3903,65 @@ h1.trending-title {
   padding: 0;
 }
 
-/*searchbar*/
+/* big search bar (shared: landing page & reading list) */
 
-#searchbar-lists {
-    margin: 15px auto;
-    padding: 15px;
-    border-radius: 25px;
-    width: 80%;
-    box-sizing: border-box;
+.big-search-bar {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 25px;
+    box-sizing: border-box;
     font-size: 20px;
+}
+
+.big-search-bar-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.big-search-bar-input {
+    flex: 1;
+    padding: 12px 3px 12px 44px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.big-search-bar-input:focus {
+    outline: none;
+}
+
+.big-search-bar-button {
+    padding: 12px 24px;
+    background-color: #4C8FA8;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* reading list overrides */
+.big-search-bar.reading-list-search {
+    width: 80%;
     background: #ffffffc6;
     margin-bottom: 90px;
 }
 
-#searchbar-lists input {
-    outline: none;
-    width: 100%;
+.big-search-bar.reading-list-search .big-search-bar-input {
     font-family: Georgia, sans-serif;
-    font-size: 20px;
     color: #032b52;
+    border-radius: 25px;
     background: transparent;
-    border: none;
 }
 
-
-#searchbar::placeholder {
+.big-search-bar.reading-list-search .big-search-bar-input::placeholder {
     font-family: Georgia, sans-serif;
     font-size: 25px;
     color: #032b52;
@@ -4259,33 +4291,3 @@ h1.trending-title {
   white-space: nowrap;
 }
 
-/* landing-page-search */
-.home-page-search{
-  display: flex;
-  width: 90%;
-  margin: 20px;
-}
-
-.home-page-search-input{
-  flex: 1;
-  padding: 3px;
-  font-size: 20px;
-  border-radius: 20px 0 0 20px;
-  padding-left: 15px;
-  border: none;
-}
-
-.home-page-search-input:focus {
-  outline: none;
-}
-
-.home-page-search-button {
-  padding: 12px 24px;
-  background-color: #4C8FA8;
-  color: white;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-}
