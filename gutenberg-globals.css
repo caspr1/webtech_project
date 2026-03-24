@@ -3771,7 +3771,7 @@ h2.list_title {
 }
 
 h1.trending-title {
-  margin-left: 300px;
+  text-align: center;
   text-decoration: underline wavy orange 5px;
   margin-bottom: 30px;
   margin-top: 200px;
