@@ -91,53 +91,79 @@
 <div class="page_content"><!-- start content -->
 
         <div class="page">
-<!-- Three Icons on top -->
-<div class="icons-section">
-  <ul class="navlinks">
-    <li class="navlink">
-      <a class="link" href="https://www.gutenberg.org/ebooks/search/?sort_order=downloads" accesskey="0">
-        <span class="cell leftcell without-cover">
-          <span class="icon-wrapper">
-            <span class="icon icon_popular"></span>
-          </span>
-        </span>
-        <span class="cell content">
-          <span class="title">Most Popular</span>
-        </span>
-        <span class="hstrut"></span>
-      </a>
-    </li>
-    
-    <li class="navlink">
-      <a class="link" href="https://www.gutenberg.org/ebooks/search/?sort_order=release_date" accesskey="1">
-        <span class="cell leftcell without-cover">
-          <span class="icon-wrapper">
-            <span class="icon icon_date"></span>
-          </span>
-        </span>
-        <span class="cell content">
-          <span class="title">New Releases</span>
-        </span>
-        <span class="hstrut"></span>
-      </a>
-    </li>
+<style>
+  .page-with-sidebar {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .main-content-area {
+    flex: 1;
+    min-width: 0;
+  }
+  .browse-sidebar {
+    width: 215px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 4px;
+  }
+  .sidebar-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  }
+  .sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+  }
+  .sidebar-nav-link:hover { background: #eef2f7; }
+  .sidebar-nav-link .title {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #003366;
+  }
+  .sidebar-example-book {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .sidebar-example-book:hover { background: #f9f9f9; }
+  .sidebar-example-book img {
+    width: 52px;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    display: block;
+  }
+  .sidebar-book-info { font-size: 0.78em; line-height: 1.35; }
+  .sidebar-book-info .book-label {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .sidebar-book-info .book-title {
+    font-weight: bold;
+    color: #003366;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .sidebar-book-info .book-author { color: #555; display: block; }
+</style>
 
-    <li class="navlink">
-      <a class="link" href="https://www.gutenberg.org/ebooks/search/?sort_order=random" accesskey="2">
-        <span class="cell leftcell without-cover">
-          <span class="icon-wrapper">
-            <span class="icon icon_random"></span>
-          </span>
-        </span>
-        <span class="cell content">
-          <span class="title">Random Suggestions </span>
-        </span>
-        <span class="hstrut"></span>
-      </a>
-    </li>
-  </ul>
-</div>
-
+<div class="page-with-sidebar">
+<div class="main-content-area">
 <!-- The Three Tabs and their Content -->
 <div class="menu-and-content">
   <input type="radio" name="ebook-tabs" id="tab-advanced" class="tab-input" checked="">
@@ -766,6 +792,58 @@
 </div>
 </div>
 
+<div class="browse-sidebar">
+
+  <!-- Most Popular -->
+  <div class="sidebar-item">
+    <a class="sidebar-nav-link" href="https://www.gutenberg.org/ebooks/search/?sort_order=downloads" accesskey="0">
+      <span class="icon icon_popular" style="display:inline-block;width:22px;height:22px;background:transparent url(./Search_options_original_files/sprite.png) no-repeat;flex-shrink:0;"></span>
+      <span class="title">Most Popular</span>
+    </a>
+    <a class="sidebar-example-book" href="https://www.gutenberg.org/ebooks/1342">
+      <img src="https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg" alt="Pride and Prejudice cover">
+      <span class="sidebar-book-info">
+        <span class="book-label">Example:</span>
+        <span class="book-title">Pride and Prejudice</span>
+        <span class="book-author">Jane Austen</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- New Releases -->
+  <div class="sidebar-item">
+    <a class="sidebar-nav-link" href="https://www.gutenberg.org/ebooks/search/?sort_order=release_date" accesskey="1">
+      <span class="icon icon_date" style="display:inline-block;width:22px;height:22px;background:transparent url(./Search_options_original_files/sprite.png) no-repeat;flex-shrink:0;"></span>
+      <span class="title">New Releases</span>
+    </a>
+    <a class="sidebar-example-book" href="https://www.gutenberg.org/ebooks/863">
+      <img src="https://www.gutenberg.org/cache/epub/863/pg863.cover.medium.jpg" alt="The Mysterious Affair at Styles cover">
+      <span class="sidebar-book-info">
+        <span class="book-label">Example:</span>
+        <span class="book-title">The Mysterious Affair at Styles</span>
+        <span class="book-author">Agatha Christie</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- Random Suggestions -->
+  <div class="sidebar-item">
+    <a class="sidebar-nav-link" href="https://www.gutenberg.org/ebooks/search/?sort_order=random" accesskey="2">
+      <span class="icon icon_random" style="display:inline-block;width:22px;height:22px;background:transparent url(./Search_options_original_files/sprite.png) no-repeat;flex-shrink:0;"></span>
+      <span class="title">Random Suggestions</span>
+    </a>
+    <a class="sidebar-example-book" href="https://www.gutenberg.org/ebooks/2701">
+      <img src="https://www.gutenberg.org/cache/epub/2701/pg2701.cover.medium.jpg" alt="Moby Dick cover">
+      <span class="sidebar-book-info">
+        <span class="book-label">Example:</span>
+        <span class="book-title">Moby Dick</span>
+        <span class="book-author">Herman Melville</span>
+      </span>
+    </a>
+  </div>
+
+</div><!-- end browse-sidebar -->
+</div><!-- end page-with-sidebar -->
 
    </div><!--content ending-->
   </div><!-- body ending -->
