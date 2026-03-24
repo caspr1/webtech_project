@@ -33,13 +33,70 @@
   <input type="radio" name="toggle" id="search-toggle" style="display: none">
   <input type="radio" name="toggle" id="search-close" style="display: none">
   <input type="checkbox" id="about-toggle" style="display: none">
-  <div class="logo-container">
-    <a id="main_logo" href="https://www.gutenberg.org/" class="no-hover">
-      <img src="./Reading_list_original_files/pg-logo-129x80.png" alt="Project Gutenberg" draggable="false">
-    </a>
-  </div>
 
   <div class="top-header">
+    <h1><a href="landing_page_original.htm">Project Gutenberg</a></h1>
+    </div>
+
+    <div class="lower-header">
+    <a href="landing_page_original.htm" class="lower-header-logo">
+      <img src="landing_page_original_files/pg-logo-small.png" alt="Home" height="40">
+    </a>
+
+  <label for="about-toggle" class="dropdown-overlay"></label>
+  <div class="lower-header">
+    <div class="dropdown" tabindex="0">
+      <label for="about-toggle" class="dropdown-button" aria-haspopup="true">About<span aria-hidden="true" class="dropdown-icon">▼</span></label>
+      <div class="dropdown-content">
+        <a href="https://www.gutenberg.org/about/">About Project Gutenberg </a>
+        <a href="https://www.gutenberg.org/help/reading_options.html">Reading Options &amp; Kindle</a>
+        <a href="https://www.gutenberg.org/about/background/">History &amp; Philosophy</a>
+        <a href="https://www.gutenberg.org/help/">Help Pages</a>
+        <a href="https://www.gutenberg.org/ebooks/offline_catalogs.html">Offline Catalogs</a>
+      </div>
+    </div>
+
+  <label for="ebooks-toggle" class="dropdown-overlay"></label>
+  <div class="lower-header">
+    <div class="dropdown" tabindex="0">
+      <label for="ebooks-toggle" class="dropdown-button" aria-haspopup="true">E-books<span aria-hidden="true" class="dropdown-icon">▼</span></label>
+      <div class="dropdown-content">
+        <a href="https://www.gutenberg.org/ebooks/search/?sort_order=downloads">All e-books</a>
+        <a href="https://www.gutenberg.org/ebooks/categories">Categories</a>
+        <a href="https://www.gutenberg.org/ebooks/bookshelf/">Hand-curated lists</a>
+        <a href="https://www.gutenberg.org/browse/scores/top">Trending</a>
+      </div>
+    </div>
+
+  <label for="audiobooks-toggle" class="dropdown-overlay"></label>
+  <div class="lower-header">
+    <div class="dropdown" tabindex="0">
+      <label for="audiobooks-toggle" class="dropdown-button" aria-haspopup="true">Audiobooks<span aria-hidden="true" class="dropdown-icon">▼</span></label>
+      <div class="dropdown-content">
+        <a href="">All audiobooks</a>
+        <div class="has-submenu">
+          <a href="">Categories <span class="submenu-icon">&#9654;</span></a>
+          <div class="submenu">
+            <a href="">Read by humans</a>
+            <a href="">Computer generated 2003</a>
+            <a href="">Computer generated 2023</a>
+            <a href="">Librifox</a>
+          </div>
+        </div>
+        <a href="">Trending</a>
+      </div>
+    </div>
+
+    <div class="main-links">
+      <a href="https://www.gutenberg.org/ebooks/" class="link-advanced-search">Search Options</a>
+    </div>
+    <div class="main-links">
+        <a href="https://www.gutenberg.org/about/contact_information.html">Contact Us</a>
+    </div>
+    <div class="main-links">
+        <a href="https://www.gutenberg.org/donate/" class="donate-link"> Donate </a>
+    </div>
+
     <form class="search-form" method="get" action="https://www.gutenberg.org/ebooks/search/" accept-charset="utf-8">
       <label for="search-toggle" class="search-icon-btn" aria-label="Open Search">
         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em">
@@ -49,40 +106,8 @@
       </label>
       <label for="search-close" class="search-close-btn" aria-label="Close Search">X</label>
       <input type="text" class="search-input" name="query" placeholder="Quick search" aria-label="Search books">
-      <button type="submit" class="search-button">Go!</button>
+      <button type="submit" class="search-button">Search</button>
     </form>
-
-    <div class="donate-container">
-      <form class="donatelink" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="new">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="XKAL6BZL3YPSN">
-        <input class="donbtn" type="image" src="./Reading_list_original_files/en_US.gif" name="submit" alt="Donate via PayPal">
-      </form>
-      <a href="https://www.gutenberg.org/donate/" class="donate-link"> Donate </a>
-    </div>
-  </div>
-
-  <label for="about-toggle" class="dropdown-overlay"></label>
-  <div class="lower-header">
-    <div class="dropdown" tabindex="0">
-      <label for="about-toggle" class="dropdown-button" aria-haspopup="true">About<span aria-hidden="true" class="dropdown-icon">▼</span></label>
-      <div class="dropdown-content">
-        <a href="https://www.gutenberg.org/about/">About Project Gutenberg </a>
-        <a href="https://www.gutenberg.org/help/reading_options.html">Reading Options &amp; Kindle</a>
-        <a href="https://www.gutenberg.org/about/contact_information.html">Contact Us</a>
-        <a href="https://www.gutenberg.org/about/background/">History &amp; Philosophy</a>
-        <a href="https://www.gutenberg.org/help/">Help Pages</a>
-        <a href="https://www.gutenberg.org/ebooks/offline_catalogs.html">Offline Catalogs</a>
-        <a href="https://www.gutenberg.org/donate/">Donate</a>
-      </div>
-    </div>
-
-    <div class="main-links">
-      <a href="https://www.gutenberg.org/browse/scores/top" class="link-freq-downloaded">Frequently Downloaded</a>
-      <a href="https://www.gutenberg.org/ebooks/categories" class="link-main-categories">Main Categories</a>
-      <a href="https://www.gutenberg.org/ebooks/bookshelf/" class="link-reading-lists">Reading Lists</a>
-      <a href="https://www.gutenberg.org/ebooks/" class="link-advanced-search">Search Options</a>
-    </div>
   </div>
 
   <div class="tertiary-header">
@@ -90,6 +115,7 @@
     <a href="https://www.gutenberg.org/ebooks/categories" class="tertiary-link link-main-categories">Main Categories</a>
   </div>
 </header>
+
 <div class="page_content"><!-- start content -->
   
 
@@ -599,27 +625,23 @@
    </div><!--content ending-->
   </div><!-- body ending -->
    <div class="footer"><!-- start footer -->  <ul>
-      <li>
-        <a href="https://www.gutenberg.org/about/">About Project Gutenberg</a>
-      </li>
-      <li>
-        <a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy policy</a>
-      </li>
-      <li>
-        <a href="https://www.gutenberg.org/policy/permission.html" title="Permissions, Licensing and other Common Requests">Permissions</a>
-      </li>
-      <li>
-        <a href="https://www.gutenberg.org/policy/terms_of_use.html">Terms of Use</a>
-      </li>
-      <li>
-        <a href="https://www.gutenberg.org/about/contact_information.html" title="How to contact Project Gutenberg">Contact Us</a>
-      </li>
+      <li><a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy policy</a></li>
+      <li><a href="https://www.gutenberg.org/policy/permission.html" title="Permissions, Licensing and other Common Requests">Permissions</a></li>
+      <li><a href="https://www.gutenberg.org/policy/terms_of_use.html">Terms of Use</a></li>
       <li><a href="https://www.gutenberg.org/help/" title="Help, How-To, Procedures, Guidance and Information">Help</a></li>
-  </ul>
+      <li><a href="https://www.gutenberg.org/about/partners_affiliates.html">Partners and affiliates</a>.</li>
+  </ul> 
 
+  <div class="footer-bottom">
   <a href="https://www.ibiblio.org/" title="Project Gutenberg is hosted by ibiblio">
-   <img src="./Reading_list_original_files/ibiblio-logo.png" alt="ibiblio" width="110" height="32">
+    <img src="./landing_page_original_files/ibiblio-logo.png" alt="ibiblio" width="110" height="32">
   </a>
+  <div class="footer-socials">
+  <a href="https://www.facebook.com/project.gutenberg"><img src="./landing_page_original_files/f_icon.png" alt="Facebook"></a>
+  <a href="https://mastodon.social/@gutenberg_org"><img src="./landing_page_original_files/m_icon.png" alt="Mastodon"></a>
+  <a href="https://bsky.app/profile/gutenberg.org"><img src="./landing_page_original_files/b_icon.png" alt="Bluesky"></a>
+</div>
+</div>
 </div><!-- footer ending-->
 
  

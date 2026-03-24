@@ -605,6 +605,7 @@ test_index for latest covers from gutenberg1*/
   padding-bottom: 60px;
   padding-left: 5vw;
   padding-right: 5vw;
+  
 }
 
 /*
@@ -833,7 +834,6 @@ test_index for latest covers from gutenberg1*/
   position: inherit;
   left: 0;
   right: 0;
-  bottom: -32px;
   text-align: center;
   font-size: 0.9em;
   width: 100%;
@@ -3818,7 +3818,7 @@ h1.trending-title {
 }
 
 #main-categories h1{
-  margin-left: 550px;
+  text-align: center;
   text-decoration: underline wavy orange 5px;
   margin-bottom: 30px;
   margin-top: 200px;
@@ -3831,7 +3831,7 @@ h1.trending-title {
 /* Reading Lists*/
 
 #reading-title {
-  margin-left:300px;
+  text-align: center;
   text-decoration: underline wavy orange 5px;
   font-family: Impact, sans-serif;
   font-size: 90px;
