@@ -1,29 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl_NL">
 
-<script type="text/javascript">//
-var noprint_display_styles = [];
-var noprint_elements = document.getElementsByClassName("noprint");
-var noscreen_elements = document.getElementsByClassName("noscreen");
-addEventListener('beforeprint', (e) => {
-for(let ele of noprint_elements) {
-noprint_display_styles.push(ele.style.display);
-ele.style.display = "none";
-}
-for(let _ele of noscreen_elements) {
-_ele.style.display = "block";
-}
-});
-addEventListener('afterprint', (e) => {
-for(let i = 0; i < noprint_elements.length; i++) {
-noprint_elements[i].style.display = noprint_display_styles[i];
-}
-for(let j = 0; j < noscreen_elements.length; j++) {
-noscreen_elements[j].style.display = "none";
-}
-noprint_display_styles = [];
-});
-//</script>
+<script src="javascript.js"></script>
 <head>
 <style>
 .icon   { background: transparent url(/pics/sprite.png) 0 0 no-repeat; }
@@ -33,14 +11,7 @@ noprint_display_styles = [];
 
 <link rel="stylesheet" type="text/css" href="gutenberg-globals.css">
 
-<script>//
-var canonical_url   = "http://www.gutenberg.org/ebooks/84";
-var lang            = "nl_NL";
-var msg_load_more   = "Load More Results…";
-var page_mode       = "screen";
-var dialog_title    = "";
-var dialog_message  = "";
-//</script>
+
 
 <link rel="shortcut icon" href="/gutenberg/favicon.ico">
 <link rel="canonical" href="http://www.gutenberg.org/ebooks/84">
@@ -540,12 +511,7 @@ Reading ease score: 65.0 (8th &amp; 9th grade). Neither easy nor difficult to re
 </footer>
 </div>
 
-<script>
-function scrollCarousel(id, dir) {
-  var el = document.getElementById(id);
-  if (el) el.scrollBy({ left: dir * 250, behavior: 'smooth' });
-}
-</script>
+
 
 </body>
 </html>
