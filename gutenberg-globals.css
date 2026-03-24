@@ -117,6 +117,7 @@ header {
   position: sticky;
   top: -80px;
   z-index: 1000;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2)
 }
 
 h2 {
@@ -1157,38 +1158,6 @@ Remove sticky header at this breakpoint.
   }
 }
 
-.search-form {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.search-input {
-  padding: 9px 16px;
-  border: 2px solid #fff;
-  border-radius: 20px 0 0 20px;
-  font-size: 14px;
-  width: 0;
-  overflow: hidden;
-  padding: 9px 0;
-  border: none;
-  transition: width 0.3s ease, padding 0.3s ease, border 0.3s ease;
-}
-
-.search-button {
-  background-color: #4C8FA8;
-  color: white;
-  border: none;
-  padding: 0;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  width: 0;
-  overflow: hidden;
-  transition: width 0.3s ease, padding 0.3s ease;
-}
 
 .donate-container {
   display: flex;
@@ -1286,10 +1255,16 @@ Remove sticky header at this breakpoint.
   padding: 0 8px;
   display: flex;
   justify-content: center;
-  height: 60px;
-  align-items: center;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  min-height: 60px;
+  align-items: center;;
 }
+
+.lower-header-logo img {
+  border: 2px solid #f0f0f0;
+  border-radius: 2px;
+}
+
 
 @media (max-width: 435px) {
   .lower-header {
@@ -1560,43 +1535,6 @@ Remove sticky header at this breakpoint.
 .tertiary-header::before:hover,
 .tertiary-header::after:hover {
   text-decoration: underline;
-}
-
-.search-icon-btn {
-  display: inline-block;
-  background-color: #4C8FA8;
-  color: white;
-  border: 2px solid #4C8FA8;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-  line-height: 1;
-}
-
-.search-icon-btn:hover {
-  opacity: 0.9;
-}
-
-.search-icon-btn .search-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  fill: currentColor;
-}
-
-.search-close-btn {
-  display: none;
-  background-color: #4C8FA8;
-  color: white;
-  border: 2px solid #4C8FA8;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
 }
 
 /* ====== COLLAPSIBLE ======= */
@@ -3401,7 +3339,74 @@ Remove sticky header at this breakpoint.
   }
 }
 
+.search-icon-btn {
+  display: inline-block;
+  background-color: #4C8FA8;
+  color: white;
+  border: 2px solid #4C8FA8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  line-height: 1;
+}
 
+.search-icon-btn:hover {
+  opacity: 0.9;
+}
+
+.search-icon-btn .search-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.search-close-btn {
+  display: none;
+  background-color: #dddddd;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 9px 16px;
+  border: 1px  #dddddd;
+  border-radius: 20px 0 0 20px;
+  font-size: 14px;
+  width: 0;
+  overflow: hidden;
+  padding: 9px 0;
+  border: 1px;
+  transition: width 0.3s ease, padding 0.3s ease, border 0.3s ease;
+}
+
+.search-button {
+  background-color: #4c8fa8;
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
 
 #about-toggle:checked ~ .dropdown-overlay {
   display: block;
@@ -3423,6 +3428,7 @@ Remove sticky header at this breakpoint.
 
 #search-toggle:checked ~ .lower-header .search-form .search-close-btn {
   display: inline-block;
+
 }
 
 #search-toggle:checked ~ .lower-header .search-form .search-input {
@@ -3437,8 +3443,6 @@ Remove sticky header at this breakpoint.
   padding: 9px 24px;
   border: 1px solid #4C8FA8;
 }
-
-
 
 /* SEARCH OPTION IDS */
 
