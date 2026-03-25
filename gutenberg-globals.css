@@ -3684,7 +3684,7 @@ top: 14px;
 .book-list h2 {
   color: #964400;
   padding: 30px 20px; 
-  background-color: #ab6f40;
+  background-color: #ab7e40;
   border-radius: 10px;
   font-size: 48px;
   text-shadow: 2px 2px 8px #fdfdfd;
@@ -3708,29 +3708,14 @@ top: 14px;
   padding-top: 160px; 
 }
 
-.mission_title {
+.mission-title h2{
   text-align: center;
-  text-decoration: underline wavy orange 5px;
-  margin-bottom: 50px;
-  margin-top: 200px;
+  margin-bottom: 20px;
+  margin-top: 50px;
   font-family: Impact, sans-serif;
-  font-size: 90px;
-  letter-spacing: 2px;
-  color: #3e0000d0
-}
-
-#mission {
-  margin-top: 200px;
-  text-align: center;
-  width: 90%;
-  color: #520C15;
-  letter-spacing: 0.5px;
-  font-family: Georgia, serif;
   font-size: 50px;
-  font-weight: 900;
-  padding: 20px;
-  margin: 20px auto 90px auto; 
-
+  letter-spacing: 2px;
+  color: #000000
 }
 
 .about_box, .list_box {
@@ -3749,19 +3734,7 @@ top: 14px;
 
 
 
-h1 {
-  font-size: 35px;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-  color: #620606;
-}
 
-h2 {
-  color: #603002;
-  font-size: 27px;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
 
 .about_box p {
   font-size: 24px;
@@ -3814,6 +3787,9 @@ h2 {
   display: block;
   margin: 0 auto 40px auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
+
 }
 
 .mission_figure img {
@@ -4368,4 +4344,21 @@ h1.trending-title {
 .subjects-cell a {
   white-space: nowrap;
 }
+
+
+/* search options overwrites */
+#tab-advanced:checked ~ .tabs-container label[for="tab-advanced"],
+#tab-fulltext:checked ~ .tabs-container label[for="tab-fulltext"],
+#tab-categories:checked ~ .tabs-container label[for="tab-categories"] {
+  background-color: #fdf4e0;
+  border-radius: 8px;
+  color: #522500
+}
+
+.page .tabs-container label:hover {
+  background-color: #522500;
+  color: #fdf4e0;
+}
+
+
 
