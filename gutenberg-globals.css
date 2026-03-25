@@ -2286,13 +2286,14 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #212529;
 }
 
-/* ---------- 'Find more' link ---------- */
+/* 'Find more' link */
 
 .box_shadow {
-  border: none;
+  border: 1px solid #d2d2d2;
   border-radius: 10px;
   display: inline-block;
   min-width: 100%;
+  background-color: #eeeeeef0; /* match other page blocks */
 }
 
 .box_shadow p a {
@@ -2314,7 +2315,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 /* Box Shadow heading label */
 .box_shadow label { font-size: 1.35rem; }
 
-/* ---------- Category Grid ---------- */
+/* Category Grid  */
 .category-grid {
   display: flex;
   flex-wrap: wrap;
@@ -2375,7 +2376,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   .category-grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- Info Boxes ---------- */
+/* Info Boxes  */
 .info-box-container {
   display: flex;
   gap: 30px;
@@ -2423,7 +2424,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   .info-box { margin-bottom: 15px; }
 }
 
-/* ---------- Latest Releases & Random Selection ---------- */
+/* Latest Releases & Random Selection  */
 .lib.latest {
   overflow-x: auto;
   display: flex;
@@ -2474,14 +2475,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 120px;
 }
 
-
-
-
-
-
-
-
-/* ====== icon classes ====== */
+/* icon classes  */
 
 .icon_flattr {
   background-position: 0px 0px;
@@ -2740,10 +2734,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
-
-
-
-/* ====== classes inside specific elements ====== */
+/* classes inside specific elements */
 
 div.breadcrumbs,
 div.header,
@@ -2940,9 +2931,6 @@ h1 .icon {
   float: left;
   margin-left: 20px;
 }
-
-
-
 
 
 /*------------------------------------*\
@@ -3342,9 +3330,7 @@ h1 .icon {
   }
 }
 
-/*
-Remove sticky header at this breakpoint.
-*/
+/* Remove sticky header at this breakpoint. */
 @media (max-width: 1024px) and (min-width: 935px) {
 
   #main_logo img {
@@ -3439,6 +3425,7 @@ Remove sticky header at this breakpoint.
   display: block;
   z-index: 900;
 }
+
 /* About dropdown toggle */
 #about-toggle:checked ~ .lower-header .dropdown .dropdown-content {
   display: block;
@@ -3501,7 +3488,7 @@ border: 1px solid #ccc;
 top: 14px;
 }
 
-/* ====== HOMEPAGE IDS ====== */
+/* HOMEPAGE IDS  */
 
 
 #slogan {
@@ -3515,8 +3502,6 @@ top: 14px;
 }
 
 #sub-slogan { font-size: 18px; }
-
-
 
 
 /*------------------------------------*\
@@ -3994,15 +3979,6 @@ h1.trending-title {
     color: #032b52;
 }
 
-/*------------------------------------*\
-  BOOK DETAIL PAGE — UX IMPROVEMENTS
-  Additions for the bibrec/ebook page.
-  Covers: share heading, summary heading,
-  read-now button, download dropdown,
-  "readers also downloaded" carousel,
-  and category buttons.
-\*------------------------------------*/
-
 /* --- Share heading above social icons --- */
 .share-heading {
   font-size: 0.82em;
@@ -4013,7 +3989,7 @@ h1.trending-title {
   letter-spacing: 0.02em;
 }
 
-/* --- Summary heading above summary text --- */
+/* Summary heading above summary text */
 .summary-heading {
   font-size: 1.1em;
   color: #603002;
@@ -4022,8 +3998,6 @@ h1.trending-title {
   border-bottom: 1px solid #e0d8cc;
 }
 
-/* --- Prominent "Read Now!" button --- */
-/* Read Now button — same style as input[type="submit"] */
 .read-now-btn {
   background: var(--input-submit-bg-color);
   border: none;
@@ -4043,7 +4017,6 @@ h1.trending-title {
   text-decoration: none !important;
 }
 
-/* --- Download dropdown (<details> element) --- */
 .download-dropdown {
   margin: 0 0 1.2em 0;
 }
@@ -4076,7 +4049,7 @@ h1.trending-title {
 .download-toggle-btn:hover {
   background-color: #e8e4da;
 }
-/* Round bottom corners off when open so it connects to the list below */
+
 .download-dropdown[open] > summary .download-toggle-btn,
 .download-dropdown[open] > summary {
   border-radius: 6px 6px 0 0;
@@ -4154,13 +4127,11 @@ h1.trending-title {
   opacity: 1;
 }
 
-/* Small note below the dropdown about extra files */
 .more-files-note {
   margin: 0.4em 0 0 0;
   color: #888;
 }
 
-/* --- "Readers also downloaded" carousel --- */
 .readers-also-section {
   margin: 0.8em 0 1.4em 0;
 }
@@ -4259,7 +4230,7 @@ h1.trending-title {
   background-color: #e8e4da;
 }
 
-/* --- Category buttons (replaces navlinks) --- */
+/* Category buttons (replaces navlinks)  */
 .category-section {
   margin: 1em 0 1em 0;
 }

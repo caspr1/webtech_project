@@ -37,6 +37,17 @@ function scrollCarousel(id, dir) {
   if (el) el.scrollBy({ left: dir * 250, behavior: 'smooth' });
 }
 
+// Back button handler - source: https://www.w3schools.com/jsref/met_his_back.asp
+function goBack() {
+  window.history.back();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.back-button').forEach(function (btn) {
+    btn.addEventListener('click', goBack);
+  });
+});
+
 // Search bar (collections page) - source: W3schools
 function searchLists() {
   let input = document.getElementById('searchbar').value.toUpperCase();
