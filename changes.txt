@@ -1,16 +1,90 @@
+Singular book page
 
-Individual book page
-- QR code removed: The original shows a QR code block; the edited version does not. This was changed because the QR-code lead to the same page and was thus unnecessary
-- Social share icons: The original uses CSS sprite-based icons. The edited version replaces all of them with inline SVG icons (Mastodon, Twitter/X, Facebook, Bluesky, Print).
-- "Share" heading added: The edited version adds a "Share this book with your friends" label above the social buttons. This was done so there is more of a call to action
-- "Summary" heading added: The edited version adds an <h2 class="summary-heading">Summary</h2> before the book description. The original has no heading there.
-- Download section redesigned: The original uses a full HTML table listing all formats. The edited version replaces this with a prominent "Read Now!" button and a collapsible dropdown for all download options, styled as individual rows instead of table cells. This way we hoped to make it more clear visually
-- "Similar Books" section redesigned: The original uses a simple navlink list for bookshelves. The edited version replaces this with a horizontally scrollable book carousel (with cover images for Dracula, Dorian Gray, Jekyll & Hyde, etc.) and a grid of category buttons.
-- Section order swapped: In the original, the order inside the page is Download -> Similar Books -> About this eBook. In the edited version it is Download -> About this eBook -> Similar Books.
-- Subjects table row changed: The original lists each subject in a separate table row. The edited version puts all subjects into a single table cell separated by bullet characters.
-- "Back" button added: The edited version adds a Back button near the top of the content area.
+Html changes
 
-Search options page
-- Three browse icons moved to sidebar: The original displays Most Popular, New Releases, and Random Suggestions as navlink icons above the search tabs. The edited version removes them from the top entirely and instead places them in a new right-hand sidebar.
-- Sidebar added: The edited version introduces a page-with-sidebar flex layout with a new browse-sidebar panel on the right. Each sidebar item (Most Popular, New Releases, Random Suggestions) includes an example book cover and author (Pride and Prejudice / Jane Austen, The Mysterious Affair at Styles / Agatha Christie, Moby Dick / Herman Melville).
-- "Back" button added: Same as in the Frankenstein edit — a back button is added at the top of the content area.
+- Script/CSS loading: the original embeds inline JavaScript and loads assets from absolute Gutenberg URLs. The edited version adds an external
+  <script src="javascript.js"> and uses relative paths for the stylesheet.
+- QR code removed: the original shows a QR code block; the edited version
+  does not.
+- Social share icons: the original uses CSS sprite-based icons. The edited
+  version replaces all of them with inline icons.
+- "Share" heading added: a "Share this book with your friends" label is above the social buttons.
+- "Summary" heading added: an <h2 class="summary-heading">Summary</h2> is
+  added before the book description. The original has no heading there.
+- Download section redesigned: the original uses a full HTML table listing
+  all formats. The edited version replaces this with a "Read Now!"   button and a collapsible <details> dropdown for all download options, styled as individual rows instead of table cells.
+- "Similar Books" section redesigned: replaced the list with links with a horizontally   scrollable book carousel and a collection of category pill-buttons.
+- Subjects table row consolidated: the original lists each subject in a
+  separate <tr>. The edited version puts all subjects in a single cell
+  separated by bullet (•) characters.
+- "Back" button added: a <button class="back-button">Back</button> is added
+  near the top of the content area.
+
+CSS changes 
+- shadow-bg-color variable: changed from #d9eaef to #ce9f78 (warm
+  beige/orange tone).
+- body: added "position: relative".
+- body::before: new rule added — creates a fixed full-viewport background
+  image (background.jpg) at 0.3 opacity.
+- header: changed from "position: fixed" to "position: sticky; top: -80px"
+  and a box-shadow added.
+- .page_content: margin-top reduced from 160px to 40px.
+- .page_content h1: margin-top reduced from 3.5em to 1em.
+- .back-button: new rule added to style the Back button.
+- .search-icon-btn: now always visible (not just on screens under 500px);
+  background color changed to dark red (#3e0000e7).
+- .read-now-btn and .read-now-btn:hover: new rules; style the Read Now!
+  button.
+- Download dropdown — new rules: .download-dropdown, .download-toggle-btn,
+  .download-options-list, .dl-option-row, .dl-option-link, .dl-name,
+  .dl-note, .dl-size, .dl-clouds, .dl-cloud-link, .more-files-note.
+  These replace the old .files table styling.
+- Book carousel — new rules: .readers-also-section, .readers-also-heading,
+  .book-carousel-wrapper, .book-carousel, .carousel-card, .carousel-title,
+  .carousel-author, .carousel-btn. These support the new carousel.
+- Category buttons — new rules: .category-section, .category-heading,
+  .category-buttons-grid, .category-btn. These replace the old bookshelf
+  navlinks.
+- Social media icons — new rules: "#social .social-button a svg" and hover
+  states; replaces the old CSS sprite-based icon approach.
+- .subjects-cell a: new rule; supports the consolidated subjects display.
+- #download_options_table, #about_book_table: border changed from none to
+  3px solid #b8b8b8.
+
+JavaScript changes
+- scrollCarousel(id, dir): new function added; scrolls the "Readers also
+  downloaded" carousel left or right by 250px with smooth behavior.
+
+
+Search options
+
+Html changes
+- Three browse icons moved to sidebar: the original displays Most Popular,
+  New Releases, and Random Suggestions as navlink icons above the search
+  tabs. The edited version removes them from the top entirely and places
+  them in a new right-hand sidebar instead.
+- Sidebar added: a page-with-sidebar flex layout is introduced with a new
+  browse-sidebar panel on the right. Each sidebar item (Most Popular, New
+  Releases, Random Suggestions) includes an example book cover and author
+  (Pride and Prejudice / Jane Austen, The Mysterious Affair at Styles /
+  Agatha Christie, Moby Dick / Herman Melville).
+- "Back" button added: a <button class="back-button">Back</button> is added
+  near the top of the content area.
+
+Css changes
+- shadow-bg-color variable: changed from #d9eaef to #ce9f78.
+- body: added "position: relative".
+- body::before: new rule added — creates a fixed full-viewport background
+  image (background.jpg) at 0.3 opacity.
+- header: changed from "position: fixed" to "position: sticky; top: -80px"
+  and a box-shadow added.
+- .page_content: margin-top reduced from 160px to 40px.
+- .footer: added display: flex, flex-wrap: wrap, justify-content: center.
+  New sub-rules added: .footer-bottom, .footer-bottom > a, .footer-socials,
+  .footer ul.
+- .back-button: new rule added to style the Back button.
+- Sidebar styles added (inline in HTML): .page-with-sidebar, .main-content-area, .browse-sidebar, .sidebar-item, .sidebar-nav-link, .sidebar-example-book, .sidebar-book-info — all new rules that create and style the right-hand browse sidebar with example book cards.
+
+JavaScript changes
+- searchLists(): new function added (shared via javascript.js); used for
+  filtering list items on other pages but included in the same shared file.
