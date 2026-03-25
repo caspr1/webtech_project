@@ -39,7 +39,7 @@
   --table-bg-color: #f8f9fa;
   --th-list-logo-bg-color: #eceadf;
   --input-submit-bg-color: #60a3bc;
-  --shadow-bg-color: #d9eaef;
+  --shadow-bg-color: #ce9f78;
 
   /* text colors */
   --main-txt-color: #000000; /* alt: #A01F13; */
@@ -890,7 +890,6 @@ test_index for latest covers from gutenberg1*/
   text-decoration: none;
   text-align: center;
   width: 100px;
-  background-color: var(--shadow-bg-color);
 }
 
 @media only screen and (max-width: 750px) {
@@ -2268,7 +2267,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 /* Links */
 .homepage a {
-  color: #007bff;
+  color: #fefefe;
   text-decoration: none;
   transition: color 0.15s ease-in-out,
               transform 0.2s ease-in-out,
@@ -2297,13 +2296,21 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .box_shadow p a {
-  background-color: #C7DDE3;
+  background-color: #b37e58;
   padding: 5px 12px;
   border-radius: 3px;
+  color: white
 }
 
+.box_shadow p a,
+.box_shadow p a:link,
+.box_shadow p a:visited {
+  color: black;
+}
+
+
 .box_shadow p a:hover {
-  background-color: #7ebed0;
+  background-color: #b2957f;
 }
 
 /* Responsive width for cover carousels */
@@ -3354,9 +3361,9 @@ h1 .icon {
 
 .search-icon-btn {
   display: inline-block;
-  background-color: #4C8FA8;
+  background-color: #3e0000e7;
   color: white;
-  border: 2px solid #4C8FA8;
+  border: 2px solid #3e0000e7;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 16px;
@@ -3407,7 +3414,7 @@ h1 .icon {
 }
 
 .search-button {
-  background-color: #4c8fa8;
+  background-color: #3e0000e7;
   color: white;
   border: none;
   padding: 0;
@@ -3455,7 +3462,7 @@ h1 .icon {
 #search-toggle:checked ~ .lower-header .search-form .search-button {
   width: auto;
   padding: 9px 24px;
-  border: 1px solid #4C8FA8;
+  border: 1px solid #3e0000e7;
 }
 
 /* SEARCH OPTION IDS */
@@ -3950,12 +3957,12 @@ h1.trending-title {
 
 .big-search-bar-button {
     padding: 12px 24px;
-    background-color: #4C8FA8;
+    background-color: #3e0000e7;
     color: white;
     border: none;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
