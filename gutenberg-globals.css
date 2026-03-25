@@ -720,12 +720,12 @@ test_index for latest covers from gutenberg1*/
 }
 
 .page_content a:link {
-  color: #003366;
+  color: #522500;
   text-decoration: underline;
 }
 
 .page_content a:visited {
-  color: #3e444d;
+  color: #522500;
 }
 
 .page_content a:hover {
@@ -3605,6 +3605,69 @@ top: 14px;
   margin-top: 0;
 }
 
+.info-box{
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #3e0000; 
+  font-size: 20px;
+  background: #fdf4e0;
+  padding: 25px;
+  margin: 60px auto 40px auto;
+  max-width: 1200px;
+  width: 100%;
+  border-left: 3px solid #800020;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.box_shadow {
+  border: 1px solid #c4a882;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 100%;
+  background-color: #fdf4e0;
+  border-left: 3px solid #800020;
+}
+
+.box_shadow p a {
+  background-color: #800020;
+  padding: 5px 12px;
+  border-radius: 3px;
+  color: white;
+}
+
+.box_shadow p a ,
+.box_shadow p a:link,
+.box_shadow p a:visited {
+  color: #fdf4e0; 
+  text-decoration: none;
+}
+
+.box_shadow p a:hover {
+  background-color: #b2957f;
+}
+
+
+.subtitle h2 {
+  text-align: center;
+  color: #522500;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size:55px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.subtitle h3 {
+  text-align: center;
+  color: #522500;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size:40px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+
 .bookshelves {
   display: grid;
   grid-template-columns: 32% 32% 32%;
@@ -3621,7 +3684,7 @@ top: 14px;
 .book-list h2 {
   color: #964400;
   padding: 30px 20px; 
-  background-color: #eb9e1852;
+  background-color: #ab6f40;
   border-radius: 10px;
   font-size: 48px;
   text-shadow: 2px 2px 8px #fdfdfd;
@@ -3674,16 +3737,17 @@ top: 14px;
   font-family: "Georgia", "Times New Roman", serif;
   color: #520C15; 
   font-size: 20px;
-  background: linear-gradient(135deg, #fbc654, #7a003390);
+  background: #fdf4e0;
   padding: 25px;
   margin: 60px auto 40px auto;
   max-width: 1200px;
   width: 100%;
-
-  border-left: 6px solid #800020;
+  border-left: 3px solid #800020;
   border-radius: 12px;
-  box-shadow: 0 6px 15px #e2b7b7;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+
 
 h1 {
   font-size: 35px;
@@ -3773,7 +3837,7 @@ h2 {
 
 .counter-caption {
   font-family: Impact, sans-serif;
-  color: #704304e2;
+  color: #522500;
   margin-bottom: 40px;
   text-align: center;
   font-size: 40px;
@@ -3913,15 +3977,7 @@ h1.trending-title {
   background-color: rgba(252, 253, 255, 0.648);
 }
 
-#collectiontitle, #allreadingliststitle {
-  text-align: center;
-  color: #522500;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size:55px;
-  line-height: 1.2;
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
+
 
 #collections-box li {
   margin-left: 60px;
