@@ -1,22 +1,21 @@
-Singular book page
-
 global changes:
 
 html
-
 - Script/CSS loading: the original embeds inline JavaScript and loads assets from absolute Gutenberg URLs. The edited version adds an external
   <script src="javascript.js"> and uses relative paths for the stylesheet.
 - "Back" button added: a <button class="back-button">Back</button> is added
   near the top of the content area.
 
-Global CSS changes 
+css
+- changed info-box to fit theme (beige and brown) and times new roman. 
+  because it gives more of an library feel.
+- added page-title
+- changed carousel to fit theme
 - shadow-bg-color variable: changed from #d9eaef to #ce9f78 (warm
   beige/orange tone).
 - body: added "position: relative".
 - body::before: new rule added — creates a fixed full-viewport background
   image (background.jpg) at 0.3 opacity.
-- header: changed from "position: fixed" to "position: sticky; top: -80px"
-  and a box-shadow added.
 - .page_content: margin-top reduced from 160px to 40px.
 - .page_content h1: margin-top reduced from 3.5em to 1em.
 - .back-button: new rule added to style the Back button.
@@ -29,8 +28,6 @@ Global CSS changes
 - body: added "position: relative".
 - body::before: new rule added — creates a fixed full-viewport background
   image (background.jpg) at 0.3 opacity.
-- header: changed from "position: fixed" to "position: sticky; top: -80px"
-  and a box-shadow added.
 - .page_content: margin-top reduced from 160px to 40px.
 - .footer: added display: flex, flex-wrap: wrap, justify-content: center.
   New sub-rules added: .footer-bottom, .footer-bottom > a, .footer-socials,
@@ -42,8 +39,30 @@ JavaScript changes
 - scrollCarousel(id, dir): new function added; scrolls the "Readers also
   downloaded" carousel left or right by 250px with smooth behavior.
 
+Header:
+-removed the logo
+-top header is just project gutenber text (also home button)
+-moved the search bar from top-header to lower header, made it fold out to save space
+-reorganised the navigation links, about, ebooks and audio books fold out. contact us and donate dont fold out.
+-added little PG logo in the nav bar to function as a home button
+-removed tertiary-header
+-only lower-header scrolls with the page in order to save some vertical space
+
+Footer:
+- Include About Project gutenberg and contact us
+- Added socials to footer
+
 
 Page specific changes:
+
+Landing page html changes
+- Added prominent search bar, since most people who will visit the website will want to look up a specific book
+- wrapped the slogan in a info-box container so it fits the theme
+- removed redundant info boxes (get help, Audio books, social media). This information was already available in other places and cluttered up the landing page
+- simplified the how to help and the special areas info box.
+
+Landing page css changes
+-  There is no landing page specific css, it all uses global css.
 
 book page html changes
 - QR code removed: the original shows a QR code block; the edited version
@@ -62,7 +81,6 @@ book page html changes
 
 
 book page css changes
-
 - Category buttons — new rules: .category-section, .category-heading,
   .category-buttons-grid, .category-btn. These replace the old bookshelf
   navlinks.
