@@ -3522,6 +3522,10 @@ top: 14px;
     background: #f0f0f0;
   }
 }
+/*-----------------------------------------------------------------------------*/
+/* our changes */
+/* Here we put all changes we made to the css, this way it is clear what we have added, modified and overwritten
+/*-----------------------------------------------------------------------------*/
 
 /* global changes (for multiple pages) */
 
@@ -3784,9 +3788,6 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 4px -2px #00000033
 }
-
-
-
 
 .top-header {
   background-color: #f0f0f0;
