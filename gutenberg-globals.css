@@ -4092,9 +4092,6 @@ header {
 }
 
 
-
-
-
 .about_box p {
   font-size: 24px;
   line-height: 1.7;
@@ -4236,43 +4233,8 @@ h2.list_title {
   width: 900px;
 }
 
-h1.trending-title {
-  text-align: center;
-  text-decoration: underline wavy orange 5px;
-  margin-bottom: 30px;
-  margin-top: 200px;
-  font-family: Impact, sans-serif;
-  font-size: 90px;
-  letter-spacing: 2px;
-  color: #3e0000d0
-}
-
-/*Main Categories*/
-
-
-
-#main-categories h1{
-  text-align: center;
-  text-decoration: underline wavy orange 5px;
-  margin-bottom: 30px;
-  margin-top: 200px;
-  font-family: Impact, sans-serif;
-  font-size: 90px;
-  letter-spacing: 2px;
-  color: #3e0000 
-}
 
 /* Reading Lists*/
-
-#reading-title { /* kan weg */
-  text-align: center;
-  text-decoration: underline wavy orange 5px;
-  font-family: Impact, sans-serif;
-  font-size: 90px;
-  letter-spacing: 2px;
-  color: #3e0000;
-  margin-bottom: 150px;
-}
 
 
 #readinglisthead {  
@@ -4311,7 +4273,6 @@ h1.trending-title {
   margin-top: 50px;
   background-color: rgba(252, 253, 255, 0.648);
 }
-
 
 
 #collections-box li {

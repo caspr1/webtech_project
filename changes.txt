@@ -2,9 +2,10 @@ global changes:
 
 html
 - Script/CSS loading: the original embeds inline JavaScript and loads assets from absolute Gutenberg URLs. The edited version adds an external
-  <script src="javascript.js"> and uses relative paths for the stylesheet.
+  <script src="javascript.js"> and uses relative paths for the stylesheet. Some pages use a stylekit for icons from fontawesome.com.
 - "Back" button added: a <button class="back-button">Back</button> is added
   near the top of the content area.
+
 
 css
 - changed info-box to fit theme (beige and brown) and times new roman. 
@@ -116,3 +117,43 @@ Search options Css changes
 Search options JavaScript changes
 - searchLists(): new function added (shared via javascript.js); used for
   filtering list items on other pages but included in the same shared file.
+
+
+About page: 
+HTML changes: 
+- Mission statement prominent on page, was quite hidden.
+- Added picture of founder (+ added div for embedding image and text)
+- Essay was moved to Read More
+- Help was misplaced, removed form page
+- Interesting links in one div.
+
+CSS changes: Some overall changes for styling of text boxes (.about_box, .list_box, .about_list), font style and layout of the text/image boxes on page. Hover effects on list items. Styling of image (.mission_figure).
+
+Reading Lists (=hand curated reading lists)page:
+HTML changes:
+- Search bar added because of amount of topics (to make it functioning, code in Javascript is included + Search bar has an example search
+- Added a div for text box and image
+- Explanation added in box (we got rid of random loose text on page), readability improved, + image added
+
+
+CSS changes: Reading list collections (#collections-box) and All reading lists have a different theme and different CSS style to distinguish them. Overall changes like big font for title of page + layout. Styling for first explanation box + image (#readinglisthead) 
+
+Frequently downloaded (= Trending page)
+HTML changes: 
+- Top 10 instead of 100, removed a lot of links.
+- Added Navigation box that scrolls with user for easy navigation
+- Deleted navigation option underneath each list
+- Text: “Visualizations and graphs are available as pretty pictures.”--> Visualizations and graphs can be found here. Added this link to the nav bar.
+- Moved downloaded books counter to the top in a separate div class.
+- Moved explanation paragraph to the end of the page. 
+- Added picto’s to navigation menu
+
+CSS changes: Overall style and color changes on every box(.counter-block, #book-downloads-table, #books-downloads-nav), text and layout. 
+
+Main categories page: 
+HTML changes: Added icons for every category. Placed categories in one div. No search bar on purpose, because items are already easy to find. 
+CSS changes: color/styling from global CSS.
+
+
+
+
