@@ -4358,6 +4358,7 @@ h1.trending-title {
 .page .tabs-container label:hover {
   background-color: #522500;
   color: #fdf4e0;
+  border-radius: 8px
 }
 
 
